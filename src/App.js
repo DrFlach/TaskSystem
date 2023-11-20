@@ -11,8 +11,6 @@ const App = () => {
   const [view, setView] = useState('list'); // 'list', 'form', 'details', 'calendar'
 
   useEffect(() => {
-    // Fetch tasks from the backend when the component mounts
-    // Replace the URL with the actual backend endpoint
     fetch('http://localhost:8080/tasks')
       .then(response => response.json())
       .then(data => setTasks(data))
@@ -20,8 +18,6 @@ const App = () => {
   }, []);
 
   const handleDelete = taskId => {
-    // Implement the logic to delete a task
-    // Update the backend and then update the state
     fetch(`http://localhost:8080/tasks/${taskId}`, {
       method: 'DELETE',
     })
@@ -30,14 +26,11 @@ const App = () => {
   };
 
   const handleEdit = task => {
-    // Set the selected task for editing
     setSelectedTask(task);
     setView('form');
   };
 
   const handleAdd = newTask => {
-    // Implement the logic to add a new task
-    // Update the backend and then update the state
     fetch('http://localhost:8080/tasks', {
       method: 'POST',
       headers: {
@@ -53,8 +46,6 @@ const App = () => {
   };
 
   const handleUpdate = (taskId, updatedTask) => {
-    // Implement the logic to update an existing task
-    // Update the backend and then update the state
     fetch(`http://localhost:8080/tasks/${taskId}`, {
       method: 'PUT',
       headers: {
@@ -79,7 +70,6 @@ const App = () => {
   };
 
   const handleDateSelected = selectedTasks => {
-    // Handle the tasks selected for a specific date in the calendar
     setTasks(selectedTasks);
     setView('list');
   };
