@@ -1,0 +1,7 @@
+1)MyTaskManagerApplication.java - главный класс Spring Boot приложения, который содержит метод main для запуска приложения.
+2)TaskController.java - контроллер для обработки HTTP-запросов, связанных с задачами и списками задач.
+3)Task.java и TaskList.java - классы, представляющие сущности задачи и списка задач, помеченные аннотацией @Entity.
+4)TaskRepository.java и TaskListRepository.java - интерфейсы репозиториев для взаимодействия с базой данных через Spring Data JPA.
+5)TaskService.java и TaskListService.java - сервисы для выполнения бизнес-логики.
+6)application.properties - файл конфигурации Spring Boot, в котором настраиваются параметры подключения к базе данных и другие настройки.
+7)templates - папка с шаблонами Thymeleaf для отображения веб-страниц.

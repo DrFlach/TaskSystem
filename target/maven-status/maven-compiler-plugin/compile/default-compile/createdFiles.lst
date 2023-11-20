@@ -1,0 +1,8 @@
+com\example\repository\TaskRepository.class
+com\example\MyTaskManagerApplication.class
+com\example\service\TaskListService.class
+com\example\model\TaskList.class
+com\example\model\Task.class
+com\example\service\TaskService.class
+com\example\controller\TaskController.class
+com\example\repository\TaskListRepository.class
